@@ -30,7 +30,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, MarsActivity.class);
                 String content = "Earth: Hi, I am from Earth.  Going to Mars";
-                intent.putExtra("FromEarth", content);
+                Bundle bundle = new Bundle();
+                bundle.putString("FromEarth", content);
+                intent.putExtras(bundle);
                 startActivityForResult(intent, MarsRequestCode);
             }
         });
@@ -41,7 +43,9 @@ public class MainActivity extends AppCompatActivity {
 
                 Intent intent = new Intent(MainActivity.this, MoonActivity.class);
                 String content = "Earth: Hi, I am from Earth.  Going to Moon";
-                intent.putExtra("FromEarth", content);
+                Bundle bundle = new Bundle();
+                bundle.putString("FromEarth", content);
+                intent.putExtras(bundle);
                 startActivityForResult(intent, MoonRequestCode);
             }
         });

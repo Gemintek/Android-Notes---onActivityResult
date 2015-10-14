@@ -16,7 +16,8 @@ public class MoonActivity extends AppCompatActivity {
         setContentView(R.layout.activity_moon);
 
         Intent EarthIntent = getIntent();
-        String EarthMessage = EarthIntent.getStringExtra("FromEarth");
+        Bundle bundle = EarthIntent.getExtras();
+        String EarthMessage = bundle.getString("FromEarth");
 
         TextView textView = (TextView) findViewById(R.id.moonTextView);
         textView.setText(EarthMessage);

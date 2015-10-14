@@ -16,7 +16,8 @@ public class MarsActivity extends AppCompatActivity {
         setContentView(R.layout.activity_mars);
 
         Intent EarthIntent = getIntent();
-        String EarthMessage = EarthIntent.getStringExtra("FromEarth");
+        Bundle bundle = EarthIntent.getExtras();
+        String EarthMessage = bundle.getString("FromEarth");
 
         TextView textView = (TextView) findViewById(R.id.marsTextView);
         textView.setText(EarthMessage);
